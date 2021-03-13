@@ -13,6 +13,7 @@ import { TrainerPageComponent } from './components/trainer-page/trainer-page.com
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PokemonProfileComponent } from './components/pokemon-profile/pokemon-profile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     TrainerPageComponent,
     PokemonDetailsComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PokemonProfileComponent
   ],
   imports: [
     BrowserModule,
