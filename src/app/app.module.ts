@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +12,7 @@ import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.com
 import { TrainerPageComponent } from './components/trainer-page/trainer-page.component';
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 import { LoginComponent } from './components/login/login.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { LoginComponent } from './components/login/login.component';
     PokemonCardComponent,
     TrainerPageComponent,
     PokemonDetailsComponent,
-    LoginComponent
+    LoginComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
