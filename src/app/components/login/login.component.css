@@ -1,0 +1,27 @@
+#container {
+    max-width: 75em;
+    width: 80%;
+    margin: 0 auto;
+    height: 5rem;
+    background-color: grey;
+}
+
+#login-form {
+    padding: 0.5rem 1rem;
+}
+
+#trainer-name-input {
+    margin-right: 1rem;
+}
+
+#trainer-name-input:focus {
+    outline: 0;
+}
+
+#trainer-name-button {
+    
+}
+
+#error {
+    color: red;
+}
