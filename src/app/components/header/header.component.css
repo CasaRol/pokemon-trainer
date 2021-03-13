@@ -1,6 +1,6 @@
 #navbar {
     display: flex;
-    background-color: #FF0000;
+    background-color: #f00000;
     align-items: center;
 }
 
@@ -21,7 +21,7 @@
 
 .nav-link {
     display: block;
-    color: white;
+    color: #FFCB05;
     text-align: center;
     padding: 15px 17px;
     text-decoration: none;
