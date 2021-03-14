@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StorageServiceModule } from 'ngx-webstorage-service';
 import { LocalStorageService } from './services/local-storage.service';
+import { PokemonProfileComponent } from './components/pokemon-profile/pokemon-profile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LocalStorageService } from './services/local-storage.service';
     TrainerPageComponent,
     PokemonDetailsComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PokemonProfileComponent
   ],
   imports: [
     BrowserModule,
