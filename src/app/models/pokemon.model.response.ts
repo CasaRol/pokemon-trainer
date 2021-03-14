@@ -1,6 +1,6 @@
 import { Pokemon } from "./pokemon.model";
 
-export interface PokemonResonse {
+export interface PokemonResponse {
     count: number;
     next: string;
     prev: string;

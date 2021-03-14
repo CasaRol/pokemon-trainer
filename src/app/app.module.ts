@@ -13,6 +13,8 @@ import { TrainerPageComponent } from './components/trainer-page/trainer-page.com
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { StorageServiceModule } from 'ngx-webstorage-service';
+import { LocalStorageService } from './services/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StorageServiceModule
   ],
-  providers: [],
+  providers: [LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
