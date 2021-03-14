@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, shareReplay } from 'rxjs/operators';
 import { Pokemon } from '../models/pokemon.model';
-import { PokemonResonse } from '../models/pokemon.model.response';
+import { PokemonResponse } from '../models/pokemon.model.response';
 
 const pokeAPI: string = 'https://pokeapi.co/api/v2/pokemon?limit=151'
 
@@ -17,17 +17,17 @@ export class PokemonService {
 
 
   constructor(private readonly http: HttpClient) {
-    this.pokemonCache$ = this.http.get<PokemonResonse>(pokeAPI)
+    this.pokemonCache$ = this.http.get<PokemonResponse>(pokeAPI)
       .pipe(shareReplay(1))
   }
 
   fetchPokemon(): void {
     this.pokemonCache$
       .pipe(
-        map((response: PokemonResonse) => {
+        map((response: PokemonResponse) => {
           return response.results.map((pokemon: Pokemon) => ({
             ...pokemon,
-            ...this.getIdAnImage(pokemon.url)
+            ...this.getIdAndImage(pokemon.url)
           }))
         })
       ).subscribe(
@@ -40,7 +40,7 @@ export class PokemonService {
       )
   }
 
-  private getIdAnImage(url: string): any {
+  private getIdAndImage(url: string): any {
     const id = url.split('/').filter(Boolean).pop()
     return {
       id: Number(id),

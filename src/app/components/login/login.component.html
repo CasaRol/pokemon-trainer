@@ -1,30 +1,37 @@
 <div id="container">
-  <form [formGroup]="loginForm" id="login-form" autocomplete="off">
-    <input
-      id="trainer-name-input"
-      name="trainer-name"
-      formControlName="trainerName"
-      type="text"
-      placeholder="Enter your trainer name..."
-      required
-      minlength="4"
-      maxlength="20"
-    />
-    <button
-      [disabled]="loginForm.invalid"
-      (click)="onLoginClicked()"
-      type="button"
-      id="trainer-name-button"
-    >
-      Login
-    </button>
+  <div>
+    <form [formGroup]="loginForm" id="login-form" autocomplete="off">
+      <input
+        id="trainer-name-input"
+        name="trainer-name"
+        formControlName="trainerName"
+        type="text"
+        placeholder="Enter your trainer name..."
+        required
+        minlength="4"
+        maxlength="20"
+      />
+      <button
+        [disabled]="loginForm.invalid"
+        (click)="onLoginClicked()"
+        type="button"
+        id="login-button"
+        routerLink=""
+      >
+        Login
+      </button>
+    </form>
     <div
       *ngIf="trainerName.invalid && (trainerName.dirty || trainerName.touched)"
       id="error"
     >
       <p *ngIf="trainerName.errors.required">Trainer name is required!</p>
-      <p *ngIf="trainerName.errors.minlength">Trainer name is too short (min 4)!</p>
-      <p *ngIf="trainerName.errors.maxlength">Trainer name is too long (max 20)!</p>
+      <p *ngIf="trainerName.errors.minlength">
+        Trainer name is too short (min 4)!
+      </p>
+      <p *ngIf="trainerName.errors.maxlength">
+        Trainer name is too long (max 20)!
+      </p>
     </div>
-  </form>
+  </div>
 </div>
