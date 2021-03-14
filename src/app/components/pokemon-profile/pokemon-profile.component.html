@@ -1,6 +1,10 @@
 <div>
-    <img [src]="pokemon.imageUrl" [alt]="pokemon.name">
-    <h1>Name: {{pokemon.name}}</h1>
+    <div class="image-header">
+        <h1>{{pokemon.name}}</h1>
+        <div>
+            <img [src]="pokemon.imageUrl" [alt]="pokemon.name">
+        </div>
+    </div>
     <p>Height: {{pokemon.height}}</p>
     <p>Weight: {{pokemon.weight}}</p>
     <p>BaseExperience: {{pokemon.base_experience}}</p>

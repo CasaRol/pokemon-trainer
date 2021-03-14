@@ -18,7 +18,7 @@ export interface PokemonTypes {
 
 export interface PokemonStats {
     base_stat: number;
-    stat: PokemonStatName;
+    stat: PokemonStatName; //Interface for fetching stat name
 }
 
 export interface PokemonStatName {
@@ -26,7 +26,7 @@ export interface PokemonStatName {
 }
 
 export interface PokemonTypes {
-    type: PokemonTypeName;
+    type: PokemonTypeName; // Interface for fetching type name
 }
 
 export interface PokemonTypeName {
@@ -34,7 +34,7 @@ export interface PokemonTypeName {
 }
 
 export interface pokemonAbilities {
-    ability: PokemonAbilityName;
+    ability: PokemonAbilityName; //Interface for fetching ability name
 }
 
 export interface PokemonAbilityName {
@@ -42,7 +42,7 @@ export interface PokemonAbilityName {
 }
 
 export interface PokemonMoves {
-    move: PokemonMoveName;
+    move: PokemonMoveName; //Interface for fetching move name
 }
 
 export interface PokemonMoveName {
