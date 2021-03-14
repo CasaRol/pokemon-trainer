@@ -30,6 +30,32 @@
     padding: 2rem;
 }
 
+#select-button-container {
+    text-align: center;
+}
+
+#select-button-container button{
+	background: #f00000;
+	border: 0.2rem solid black;
+	color: #FFCB05;
+	font-size: 1.2rem;
+	border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+#select-button-container button:focus {
+    outline: 0;
+}
+
+#select-button-container button:hover {
+    color: white;
+	background-color: #FFCB05;;
+}
+
+#select-button-container button:active {
+	transform: scale(0.96);
+}
+
 .main-grid {
     margin: 1rem;
     display: grid;
@@ -39,7 +65,7 @@
     width: 100wv;
 }
 
-.secundary-grid {
+.secondary-grid {
     margin: 1rem;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
