@@ -1,0 +1,9 @@
+.grid-layout {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.scaling {
+    margin-top: 7rem;
+    width: 80%;
+}
