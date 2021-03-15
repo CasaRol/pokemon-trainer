@@ -17,6 +17,15 @@ export class LocalStorageService {
       this.storage.set(TRAINERNAME_KEY, trainerName);
   }
 
+  public storeSelectedPokemon(selectedPokemon: Pokemon): void {
+    const currentPokemonList = this.storage.get(TRAINERPOKEMONS_KEY) || [];
+    currentPokemonList.push({
+      name: selectedPokemon.name,
+      url: selectedPokemon.url
+    });
+    this.storage.set(TRAINERPOKEMONS_KEY, currentPokemonList);
+  }
+
   public isTrainerLoggedIn(): boolean {
     if (this.storage.get(TRAINERNAME_KEY)) {
       return true;
