@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import {LOCAL_STORAGE, StorageService} from 'ngx-webstorage-service';
+import { LOCAL_STORAGE, StorageService } from 'ngx-webstorage-service';
 import { Pokemon } from '../models/pokemon.model';
 
 const TRAINERNAME_KEY: string = "trainer-name";
@@ -14,7 +14,7 @@ export class LocalStorageService {
   constructor(@Inject(LOCAL_STORAGE) private storage: StorageService) { }
 
   public storeTrainerName(trainerName: string): void {
-      this.storage.set(TRAINERNAME_KEY, trainerName);
+    this.storage.set(TRAINERNAME_KEY, trainerName);
   }
 
   public storeSelectedPokemon(selectedPokemon: Pokemon): void {
@@ -31,9 +31,5 @@ export class LocalStorageService {
       return true;
     }
     return false;
-  }
-
-  public getTrainerName() {
-    return this.storage.get(TRAINERNAME_KEY)
   }
 }
