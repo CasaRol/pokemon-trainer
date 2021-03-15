@@ -32,4 +32,8 @@ export class LocalStorageService {
     }
     return false;
   }
+
+  public getTrainerName() {
+    return this.storage.get(TRAINERNAME_KEY)
+  }
 }

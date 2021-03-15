@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 import { TrainerPageComponent } from './components/trainer-page/trainer-page.component';
+import { TrainerVerificationGuard } from './guards/trainer-verification.guard';
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
   },
   {
     path: "",
-    component: LandingPageComponent
+    component: LandingPageComponent,
+    canActivate: [ TrainerVerificationGuard ]
   },
   {
     path: "login",
@@ -24,15 +26,18 @@ const routes: Routes = [
 
   {
     path: "catalogue",
-    component: CataloguePageComponent
+    component: CataloguePageComponent,
+    canActivate: [TrainerVerificationGuard]
   },
   {
     path: "catalogue/:name",
-    component: PokemonDetailsComponent
+    component: PokemonDetailsComponent,
+    canActivate: [TrainerVerificationGuard]
   },
   {
     path: "trainer",
-    component: TrainerPageComponent
+    component: TrainerPageComponent,
+    canActivate: [TrainerVerificationGuard]
   },
   {
     path: "**",
