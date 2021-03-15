@@ -1,0 +1,31 @@
+.grid-layout {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    margin: 1rem;
+}
+
+.grid-layout div {
+    text-align: center;
+    border-style: solid;
+    max-height: 80%;
+    margin: 1rem;
+    border-radius: .75rem;
+    background-color: blue;
+}
+
+.grid-layout div:hover {
+    cursor: pointer;
+}
+
+.grid-layout div:focus {
+    outline: none;
+}
+
+.grid-layout div h1 {
+    text-align: center;
+}
+
+.grid-layout div img {
+    margin: 0;
+    max-height: 55%;
+}

@@ -7,4 +7,14 @@ div {
     display: grid;
     padding: .5rem;
     background-color: white;
+    background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
+    background-position: bottom;
+}
+
+div:hover {
+    cursor: pointer;
+}
+
+div:focus {
+    outline: none;
 }

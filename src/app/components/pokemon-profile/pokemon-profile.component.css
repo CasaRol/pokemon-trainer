@@ -7,9 +7,11 @@
     padding: .5rem;
     color: #ffcb05;
     font-size: 4rem;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #395ea9;
-    background-color: #FFDE00;  
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #395ea9; 
+    background-image: url("https://static.fandomspot.com/images/07/178/00-featured-pallet-town-gen4.jpg");
+    background-position: top;
+    background-size: 50%;  
     border-radius: 2rem;
     margin-left: 25rem;
     margin-right: 25rem;
