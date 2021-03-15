@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { SessionService } from '../services/session.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TrainerVerificationGuard implements CanActivate {
 
-  constructor(private readonly router: Router) {
+  constructor(private readonly router: Router, private sessionService: SessionService) {
 
   }
 
@@ -16,7 +17,7 @@ export class TrainerVerificationGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
 
-    if (session.active()) {
+    if (this.sessionService.active()) {
       return true;
     } else {
       this.router.navigateByUrl("login")
