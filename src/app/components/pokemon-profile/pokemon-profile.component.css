@@ -1,0 +1,79 @@
+.image-header {
+    text-align: center;
+    
+}
+
+.image-header h1 {
+    padding: .5rem;
+    color: #ffcb05;
+    font-size: 4rem;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #395ea9;
+    background-color: #FFDE00;  
+    border-radius: 2rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    border-style: solid;
+    border-color: black;
+}
+
+.image-header div {
+    background-image: url("https://media-s3-us-east-1.ceros.com/hype-beast/images/2018/07/13/a9a51bc0b8d626db493ab5f9a971b043/background-hero.png?imageOpt=1&fit=bounds&width=2163");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2rem;
+    border-style: solid;
+}
+
+.image-header div img {
+    padding: 2rem;
+}
+
+#select-button-container {
+    text-align: center;
+}
+
+#select-button-container button{
+	background: #f00000;
+	border: 0.2rem solid black;
+	color: #FFCB05;
+	font-size: 1.2rem;
+	border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+#select-button-container button:focus {
+    outline: 0;
+}
+
+#select-button-container button:hover {
+    color: white;
+	background-color: #FFCB05;;
+}
+
+#select-button-container button:active {
+	transform: scale(0.96);
+}
+
+.main-grid {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: minmax(20rem, auto);
+    grid-gap: 1rem;
+    width: 100wv;
+}
+
+.secondary-grid {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 1rem;
+    width: 100wv;
+    list-style: none;
+}
+
+.margins {
+    margin: 1rem;
+}
