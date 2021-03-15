@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { LocalStorageService } from '../../services/local-storage.service'
 
 @Component({
   selector: 'app-login',
@@ -7,6 +8,9 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
+  constructor(private localStorageService: LocalStorageService) {}
+
   loginForm: FormGroup = new FormGroup({
     trainerName: new FormControl("", [
       Validators.required,
@@ -20,7 +24,6 @@ export class LoginComponent {
   }
 
   onLoginClicked() {
-    console.log("Login Clicked!");
-    console.log(this.loginForm.value);
+    this.localStorageService.storeTrainerName(this.trainerName.value);
   }
 }

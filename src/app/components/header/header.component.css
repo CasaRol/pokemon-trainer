@@ -1,5 +1,6 @@
 #navbar {
     display: flex;
+    min-width: 20rem;
     background-color: #f00000;
     align-items: center;
 }
