@@ -36,6 +36,12 @@
     text-align: center;
 }
 
+#add-pokemon-success {
+    color: #395ea9;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
 #select-button-container button{
 	background: #f00000;
 	border: 0.2rem solid black;

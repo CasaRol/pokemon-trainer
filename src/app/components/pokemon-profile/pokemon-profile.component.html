@@ -6,7 +6,12 @@
     </div>
   </div>
   <div id="select-button-container">
-    <button type="button" (click)="onSelectClicked()">Add to Pokedex!</button>
+    <div>
+      <div *ngIf="showSuccess" id="add-pokemon-success">
+        Congrantulations! You've caught a new Pokemon!
+      </div>
+      <button type="button" (click)="onSelectClicked()">Add to Pokedex!</button>
+    </div>
   </div>
   <div class="main-grid">
     <div>
