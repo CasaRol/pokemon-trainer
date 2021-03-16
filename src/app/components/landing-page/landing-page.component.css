@@ -1,16 +1,19 @@
 .grid-layout {
     display: grid;
-    grid-template-columns: 48% 48%;
+    grid-template-columns: auto auto;
     margin: 1rem;
 }
 
 .grid-layout div {
     text-align: center;
     border-style: solid;
-    max-height: 80%;
+    max-height: 65%;
+    min-width: 20rem;
     margin: 1rem;
+    padding-bottom: 2rem;
     border-radius: .75rem;
-    background-color: blue;
+    background-image: url("https://vignette.wikia.nocookie.net/dorklys-pokemon-rusty/images/6/60/Beige_Town.png/revision/latest?cb=20170705004243");
+    background-size:cover;
 }
 
 .grid-layout div:hover {
@@ -23,6 +26,10 @@
 
 .grid-layout div h1 {
     text-align: center;
+    color: #ffcb05;
+    font-size: 4rem;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #395ea9; 
 }
 
 .grid-layout div img {

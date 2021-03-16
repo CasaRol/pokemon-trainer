@@ -36,9 +36,6 @@ export class LocalStorageService {
   }
 
   public isTrainerLoggedIn(): boolean {
-    if (this.storage.get(TRAINERNAME_KEY)) {
-      return true;
-    }
-    return false;
+    return this.storage.get(TRAINERNAME_KEY)
   }
 }
