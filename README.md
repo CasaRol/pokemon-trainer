@@ -1,27 +1,38 @@
-# PokemonTrainer
+# Pokemon Trainer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+## Overview
+Pokemon catalogue website application made using Angular.js and [Poke API](https://pokeapi.co/).
 
-## Development server
+## Group members
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<ul>
+    <li> Alexander Rol </li>
+    <li> Vytautas Zarauskas </li>
+</ul>
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This simple web application has been made as the last Front-end assignment of the Experis Academy course.  
 
-## Build
+When accessing the homepage of the application the user is required to enter a trainer name in order to save Pokemons from the catalogue. Once logged in, the user can browse through the catalogue and select Pokemons to add to his/her Pokedex. Pokedex is stored locally in the browser and can be reviewed by going to the Trainer page. We do NOT collect any user data.  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+If the user tries to access restricted pages of the application without providing a name, it will automatically reroute the user to the Login page.
 
-## Running unit tests
+<br>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Getting the app to run
+### Step 1
+Assuming Node package Module (npm) is installed, open your terminal and enter "npm install -g @angular/cli".
 
-## Running end-to-end tests
+### Step 2
+Clone the project and navigate to your local files containing the cloned project (project root).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Step 3
+Run the command "npm install".  
+This ensures that all modules and packages from npm are installed before running the project for the first time.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Step 4
+We're now ready to run the program for the first time.  
+To do so, enter "ng serve" into the terminal.  
+Make sure you are still in you project root when executing this command as it expects the current directory to be at the base of the project.  
+This will take a moment to load all the files. When it's done loading, go to your browser, enter "localhost:4200/" and press enter.
