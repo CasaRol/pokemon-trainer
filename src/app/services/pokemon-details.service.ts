@@ -16,7 +16,8 @@ export class PokemonDetailsService {
     }
 
     public fetchPokemonByName(name: string): void {
-        this.http.get<Pokemon>(url + `/${name}`).pipe(
+        const pokemonUrl = url + `/${name}`;
+        this.http.get<Pokemon>(pokemonUrl).pipe(
             map((pokemon: Pokemon) => ({
                 ...pokemon,
                 imageUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`

@@ -17,13 +17,22 @@ export class LocalStorageService {
     this.storage.set(TRAINERNAME_KEY, trainerName);
   }
 
+  public getTrainerName(): string {
+    return this.storage.get(TRAINERNAME_KEY);
+  }
+
   public storeSelectedPokemon(selectedPokemon: Pokemon): void {
-    const currentPokemonList = this.storage.get(TRAINERPOKEMONS_KEY) || [];
+    const currentPokemonList = this.getSelectedPokemons();
     currentPokemonList.push({
       name: selectedPokemon.name,
-      url: selectedPokemon.url
+      url: selectedPokemon.url,
+      imageUrl: selectedPokemon.imageUrl
     });
     this.storage.set(TRAINERPOKEMONS_KEY, currentPokemonList);
+  }
+
+  public getSelectedPokemons(): Pokemon[] {
+    return this.storage.get(TRAINERPOKEMONS_KEY) || [];
   }
 
   public isTrainerLoggedIn(): boolean {

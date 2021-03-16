@@ -13,8 +13,6 @@ export class PokemonProfileComponent implements OnInit {
   constructor(private localStorageService: LocalStorageService) { }
 
   onSelectClicked() {
-    console.log(this.pokemon.name);
-    console.log(this.pokemon.url);
     this.localStorageService.storeSelectedPokemon(this.pokemon);
   }
 
